@@ -7,21 +7,27 @@ with open("puzzle_input.txt", "r") as file:
 '''
 def split_lines(l):
    return l.split('\n')
+result = 0
 
 lines = split_lines(puzzle)
-result = 0
+
+dict_numbers = {"one":"1", "two":"2", "three":"3", "four":"4",
+                "five":"5", "six":"6", "seven":"7", "eight":"8", "nine":"9"}
+
 for line in lines:
     num = ""
     n = 0
+    for key in dict_numbers:
+        if (key in line):
+            line = line.replace(key,key+dict_numbers[key]+key)
     for char in line:
         if char.isdigit():
             num = num + char
-    #print(num)
     n = num[0] + num[-1]
     n_int = int(n)
-    #print(n_int)
     result += + n_int
-print(result)
+
+print(result) #53921 #54676
 
 
 
