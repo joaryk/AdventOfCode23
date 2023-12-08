@@ -19,7 +19,6 @@ result = 0
 multiplication_results = []
 
 for line in games_txt:
-
     highest_map = {"red": "0", "green": "0", "blue": "0"}
     game_line = line.split(": ")
     games_map[game_line[0]] = game_line[1]
