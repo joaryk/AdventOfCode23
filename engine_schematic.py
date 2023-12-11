@@ -9,63 +9,65 @@ engine_file_txt = split_lines(engine_file)
 engine_list = []
 line_list = []
 for line in engine_file_txt:
-    line_list.append(line)
+    i_char = 0
+    for char in line:
+        line_list.append(char)
     engine_list.append(line_list)
+    line_list = []
 count_list = 0
 num_list = []
 num = 0
 sum = []
 is_dot = True
 result = 0
-def checking_if_dot(is_dot,inx_list, inx_char):
-    if (engine_list[inx_list][inx_char-1]) != '.':
-        is_dot = False
-    elif (engine_list[inx_list][inx_char+1]) != '.':
-        is_dot = False
-    elif (inx_list > 0):
-        if (engine_list[inx_list-1][inx_char-1]) != '.':
-            is_dot = False
-        elif (engine_list[inx_list-1][inx_char]) != '.':
-            is_dot = False
-        elif (engine_list[inx_list-1][inx_char+1]) != '.':
-            is_dot = False
-    elif (inx_list < 139):
-        if (engine_list[inx_list+1][inx_char-1]) != '.':
-            is_dot = False
-        elif (engine_list[inx_list+1][inx_char]) != '.':
-            is_dot = False
-        elif (engine_list[inx_list+1][inx_char+1]) != '.':
-            is_dot = False
-    else:
-        is_dot = True
+# def checking_if_dot(engine_list, is_dot,inx_list, inx_char):
+#     if (engine_list[inx_list][inx_char-1]) != '.':
+#         is_dot = False
+#     elif (engine_list[inx_list][inx_char+1]) != '.':
+#         is_dot = False
+#     elif (inx_list > 0):
+#         if (engine_list[inx_list-1][inx_char]) != '.':
+#             is_dot = False
+#         elif (engine_list[inx_list-1][inx_char]) != '.':
+#             is_dot = False
+#         elif (engine_list[inx_list-1][inx_char+1]) != '.':
+#             is_dot = False
+#     elif (inx_list < 139):
+#         if (engine_list[inx_list+1][inx_char]) != '.':
+#             is_dot = False
+#         elif (engine_list[inx_list+1][inx_char]) != '.':
+#             is_dot = False
+#         elif (engine_list[inx_list+1][inx_char+1]) != '.':
+#             is_dot = False
+#     else:
+#         is_dot = True
 
-for e in engine_list:
-    for line in engine_list[count_list]:
-        count_char = 0
-        for char in line_list[count_char]:
-            is_number = False
-            is_digit = False
+for line in engine_list:
+    count_char = 0
+    for char in engine_list[count_list]:
+        is_number = False
+        is_digit = False
 
-            if char.isdigit():
-                is_digit = True
-                is_number = True
-                checking_if_dot(is_dot, count_list, count_char)
+        if char.isdigit():
+            is_digit = True
+            is_number = True
+            # checking_if_dot(engine_list,is_dot, count_list, count_char)
 
-            if (is_number == False):
-                str_num = ''
-                if num_list:
-                    for n in num_list:
-                        str_num = str_num + str(n)
-                        num = int(str_num)
-                    if (is_dot == False):
-                        sum.append(num)
-                    num_list = []
-                    num = 0
-            if (is_digit == True):
-                num_list.append(char)
+        if (is_number == False):
+            str_num = ''
+            if num_list:
+                for n in num_list:
+                    str_num = str_num + str(n)
+                num = int(str_num)
+                #if (is_dot == False):
+                sum.append(num)
+                num_list = []
+                num = 0
+        if (is_digit == True):
+            num_list.append(char)
 
-            count_char += 1
-    count_list += 1
+        count_char += 1
+count_list += 1
 for s in sum:
     result += s
 
