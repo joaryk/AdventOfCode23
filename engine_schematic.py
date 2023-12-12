@@ -22,10 +22,10 @@ is_dot = True
 result = 0
 def checking_if_dot(engine_list,inx_list, inx_char):
 
-    if (inx_char != 0) and (engine_list[inx_list][inx_char-1]) != '.':
+    if (inx_char != 0) and (char.isdigit() == False) and (engine_list[inx_list][inx_char-1]) != '.':
         is_dot = False
-    # elif (inx_char < 139) and (engine_list[inx_list][inx_char+1]) != '.':
-    #     is_dot = False
+    elif (inx_char < 139) and (char.isdigit() == False) and (engine_list[inx_list][inx_char+1]) != '.':
+         is_dot = False
     elif (inx_list > 0):
         if (inx_char != 0) and (engine_list[inx_list-1][inx_char-1]) != '.':
             is_dot = False
@@ -42,8 +42,8 @@ def checking_if_dot(engine_list,inx_list, inx_char):
             is_dot = False
     else:
         is_dot = True
-
-
+    return is_dot
+#def check_same_line(list,ind_tuple):
 
 for line in engine_list:
     count_char = 0
@@ -54,7 +54,7 @@ for line in engine_list:
         if char.isdigit():
             is_digit = True
             is_number = True
-            checking_if_dot(engine_list, count_list, count_char)
+            is_dot = checking_if_dot(engine_list, count_list, count_char)
 
         if (is_number == False):
             str_num = ''
