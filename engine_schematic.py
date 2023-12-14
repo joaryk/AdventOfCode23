@@ -14,12 +14,14 @@ for line in engine_file_txt:
         line_list.append(char)
     engine_list.append(line_list)
     line_list = []
+
 count_list = 0
 num_list = []
 num = 0
 sum = []
 is_dot = True
 result = 0
+
 def checking_if_dot(e_l,inx_list, inx_char):
     check = False
     if (inx_char != 0) and (e_l[inx_list][inx_char-1]) != '.' and ((e_l[inx_list][inx_char-1]).isdigit() == False):
@@ -97,9 +99,11 @@ for line in engine_list:
             num_list.append((char, count_list, count_char))
         count_char += 1
     count_list += 1
+m = 0
 for s in sum:
+    m += 1
     result += s
-
+print(m)
 print(result)
 
 
