@@ -24,9 +24,7 @@ for r in range(220):
                 p = 1
         else:
                 p = 2 ** (l - 1)
-        print(r, l, p)
+        #print(r, l, p)
         result += p
-
 print(result)
-#porownywac liczby z obu list (slownikow) findall albo inaczej x = re.findall("[4][5]", txt)
 
