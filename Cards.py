@@ -20,11 +20,15 @@ for n, line in enumerate(cards_board):
 for r in range(220):
         winning_from_my_numbers = set(winning_numbers[r]) & set(my_numbers[r])
         winning_from_my_numbers_ = [ x for x in winning_from_my_numbers if x.isdigit() ]
+        l = len(winning_from_my_numbers_)
+        check_card = counting_cards[r]
         if r == 219:
                 break
-        l = len(winning_from_my_numbers_)
-        for y in range(l):
-                counting_cards[r + (y + 1)] += 1
-print(counting_cards)
- #zabezpieczyć końcówkę (gdy l jest większe niż y w counting_cards)
+        for c_c in range(check_card):
+                for y in range(l):
+                        counting_cards[r + (y + 1)] += 1
+result = 0
+for c in counting_cards:
+        result += counting_cards[c]
+print(result)
 
