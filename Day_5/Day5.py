@@ -22,14 +22,8 @@ seeds = [
     184627854,
     3683286274,
     337630529]
-SeedToSoil = []
-SeedToSoil_line =[]
-n = 0
-SeedToSoil = Maps.SeedToSoil.split('\n')
-for line in SeedToSoil:
-    SeedToSoil_line = line
-    print(line)
-    #SeedToSoil.append(re.split("\s", Maps.SeedToSoil))
 
-#def MapToList(map):
+for s in seeds:
+    n = 1
+
 
