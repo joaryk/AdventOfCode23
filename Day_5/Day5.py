@@ -22,8 +22,23 @@ seeds = [
     184627854,
     3683286274,
     337630529]
+soils = []
+fertilizers = []
+water = []
+lights = []
+temperatures = []
+humidities = []
+locations = []
 
 for s in seeds:
-    n = 1
-
-print(Maps.SeedToSoil)
+    n = 0
+    for x in Maps.SeedToSoil_:
+        soil = int(Maps.SeedToSoil_lines[n][0])
+        seed = int(Maps.SeedToSoil_lines[n][1])
+        range_lenght = int(Maps.SeedToSoil_lines[n][2])
+        n += 1
+        if (s > seed) & (s < ( s + range_lenght)) : #sprawdzam czy seed mieści się w zakresie i wyliczam soil
+            d = s - seed
+            soil_sought = soil + d
+            soils.append(soil_sought)
+            print(soil_sought)
