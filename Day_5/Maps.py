@@ -1,11 +1,11 @@
 import re
-SeedToSoil = []
-SoilToFertilizer = []
-FertilizerToWater = []
-WaterToLight = []
-LightToTemperature = []
-TemperatureToHumidity = []
-HumidityToLocation = []
+SeedToSoil_lines = []
+SoilToFertilizer_lines = []
+FertilizerToWater_lines = []
+WaterToLight_lines = []
+LightToTemperature_lines = []
+TemperatureToHumidity_lines = []
+HumidityToLocation_lines = []
 
 SeedToSoil = """3229936931 3770233758 236381937
 3646926122 3757559297 12674461
@@ -32,8 +32,6 @@ SeedToSoil = """3229936931 3770233758 236381937
 138466492 1033201795 147871565
 3659600583 3405756020 160385753
 2384545228 2098503058 131299414"""
-# print(SeedToSoil_txt)
-# SeedToSoil = SeedToSoil_txt.split('\n')
 
 SoilToFertilizer = """2991238558 2151391892 144378737
 1183223769 2295770629 113964757
@@ -227,10 +225,39 @@ HumidityToLocation = """2165947883 243164825 185957029
 511735481 1481246364 58101507
 2624588397 1382165537 99080827"""
 
-SeedToSoil.append(SeedToSoil.split('\n'))
-SoilToFertilizer.append(SoilToFertilizer.split('\n'))
-FertilizerToWater.append(FertilizerToWater.split('\n'))
-WaterToLight.append(WaterToLight.split('\n'))
-LightToTemperature.append(LightToTemperature.split('\n'))
-TemperatureToHumidity.append(TemperatureToHumidity.split('\n'))
-HumidityToLocation.append(HumidityToLocation.split('\n'))
+
+SeedToSoil_ = SeedToSoil.split('\n')
+for line in SeedToSoil_:
+    SeedToSoil_lines.append(line.split())
+
+SoilToFertilizer_ = SoilToFertilizer.split('\n')
+for line in SoilToFertilizer_:
+    SoilToFertilizer_lines.append(line.split())
+
+FertilizerToWater_ = FertilizerToWater.split('\n')
+for line in FertilizerToWater_:
+    FertilizerToWater_lines.append(line.split())
+
+WaterToLight_ = WaterToLight.split('\n')
+for line in WaterToLight_:
+    WaterToLight_lines.append(line.split())
+
+LightToTemperature_ = LightToTemperature.split('\n')
+for line in LightToTemperature_:
+    LightToTemperature_lines.append(line.split())
+
+TemperatureToHumidity_ = TemperatureToHumidity.split('\n')
+for line in TemperatureToHumidity_:
+    TemperatureToHumidity_lines.append(line.split())
+
+HumidityToLocation_ = HumidityToLocation.split('\n')
+for line in HumidityToLocation_:
+    HumidityToLocation_lines.append(line.split())
+
+
+# n = 0
+# for x in HumidityToLocation_:
+#     print(HumidityToLocation_lines[n])
+#     n += 1
+
+
