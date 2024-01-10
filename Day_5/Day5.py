@@ -31,7 +31,7 @@ humidities = []
 locations = []
 
 for s in seeds:
-
+    in_range = False
     n = 0
     for x in Maps.SeedToSoil_:
         soil = int(Maps.SeedToSoil_lines[n][0])
@@ -42,84 +42,105 @@ for s in seeds:
             d = s - seed
             soil_sought = soil + d
             soils.append(soil_sought)
-            #print(soil_sought)
- # elif s nie pasuje do warunku, wtedy soil = s
-for o in soils:
+            in_range = True
+    if in_range == False:
+        soils.append(s)
 
+for o in soils:
+    in_range = False
     n = 0
     for x in Maps.SoilToFertilizer_:
         fertilizer = int(Maps.SoilToFertilizer_lines[n][0])
         soil = int(Maps.SoilToFertilizer_lines[n][1])
         range_lenght = int(Maps.SoilToFertilizer_lines[n][2])
         n += 1
-        if (o > soil) & (o < (o + range_lenght)):
+        if (o > soil) & (o < (soil + range_lenght)):
             d = o - soil
             fertilizer_sought = fertilizer + d
             fertilizers.append(fertilizer_sought)
+            in_range = True
+    if in_range == False:
+        fertilizers.append(o)
 
 for f in fertilizers:
-
+    in_range = False
     n = 0
     for x in Maps.FertilizerToWater_:
         water = int(Maps.FertilizerToWater_lines[n][0])
         fertilizer = int(Maps.FertilizerToWater_lines[n][1])
         range_lenght = int(Maps.FertilizerToWater_lines[n][2])
         n += 1
-        if (f > fertilizer) & (f < (f + range_lenght)):
+        if (f > fertilizer) & (f < (fertilizer + range_lenght)):
             d = f - fertilizer
             water_sought = water + d
             waters.append(water_sought)
+            in_range = True
+    if in_range == False:
+        water.append(f)
 
 for w in waters:
 
+    in_range = False
     n = 0
     for x in Maps.WaterToLight_:
         light = int(Maps.WaterToLight_lines[n][0])
         water = int(Maps.WaterToLight_lines[n][1])
         range_lenght = int(Maps.WaterToLight_lines[n][2])
         n += 1
-        if (w > water) & (w < (w + range_lenght)):
+        if (w > water) & (w < (water + range_lenght)):
             d = w - water
             light_sought = light + d
             lights.append(light_sought)
+            in_range = True
+    if in_range == False:
+        lights.append(w)
 
 for l in lights:
-
+    in_range = False
     n = 0
     for x in Maps.LightToTemperature_:
         temperature = int(Maps.LightToTemperature_lines[n][0])
         light = int(Maps.LightToTemperature_lines[n][1])
         range_lenght = int(Maps.LightToTemperature_lines[n][2])
         n += 1
-        if (l > light) & (l < (l + range_lenght)):
+        if (l > light) & (l < (light + range_lenght)):
             d = l - light
             temperature_sought = temperature + d
             temperatures.append(temperature_sought)
+            in_range = True
+    if in_range == False:
+        temperatures.append(l)
 
 for t in temperatures:
-
+    in_range = False
     n = 0
     for x in Maps.TemperatureToHumidity_:
         humidity = int(Maps.TemperatureToHumidity_lines[n][0])
         temperature = int(Maps.TemperatureToHumidity_lines[n][1])
         range_lenght = int(Maps.TemperatureToHumidity_lines[n][2])
         n += 1
-        if (t > temperature) & (t < (t + range_lenght)):
+        if (t > temperature) & (t < (temperature + range_lenght)):
             d = t - temperature
             humidity_sought = humidity + d
             humidities.append(humidity_sought)
+            in_range = True
+    if in_range == False:
+        humidities.append(t)
 
 for h in humidities:
-
+    in_range = False
     n = 0
     for x in Maps.HumidityToLocation_:
-        location = int(Maps.TemperatureToHumidity_lines[n][0])
-        humidity = int(Maps.TemperatureToHumidity_lines[n][1])
-        range_lenght = int(Maps.TemperatureToHumidity_lines[n][2])
+        location = int(Maps.HumidityToLocation_lines[n][0])
+        humidity = int(Maps.HumidityToLocation_lines[n][1])
+        range_lenght = int(Maps.HumidityToLocation_lines[n][2])
         n += 1
-        if (h > humidity) & (h < (h + range_lenght)):
+        if (h > humidity) & (h < (humidity + range_lenght)):
             d = h - humidity
             location_sought = location + d
             locations.append(location_sought)
+            in_range = True
+    if in_range == False:
+        locations.append(h)
 
-min_loc = min(locations)
+print(min(locations))
