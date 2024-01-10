@@ -22,7 +22,7 @@ seeds = [
     184627854,
     3683286274,
     337630529]
-seeds_new = []
+seeds_ranges = []
 soils = []
 fertilizers = []
 waters = []
@@ -31,31 +31,26 @@ temperatures = []
 humidities = []
 locations = []
 
-# count = 0
-# for seed in seeds:
-#     start = seeds[count]
-#     quantity = seeds[count + 1]
-#     for q in range(quantity - 1):
-#         seeds_new.append(start)
-#         start += 1
-#     count += 2
+# TU MA BYĆ FUNKCJA OVERLAP set.intersection
+# return range(max(r1.start,r2.start), min(r1.stop,r2.stop)) or None
 
+
+# listA seeds zamieniona na przedziały:
 count = 0
-for seed in seeds:
-    start = seeds[count]
-    quantity = seeds[count + 1]
-    for q in range(quantity - 1):
-        seeds_new.append(start)
-        start += 1
-    count += 2
+for y in range(0, len(seeds), 2):
+    start = seeds[y]
+    stop = start + seeds[y + 1]
+    seeds_ranges.append((start, stop))
 
-for s in seeds:
+for s in seeds_ranges:
     in_range = False
     n = 0
+    seed_ranges = []
     for x in Maps.SeedToSoil_:
         soil = int(Maps.SeedToSoil_lines[n][0])
         seed = int(Maps.SeedToSoil_lines[n][1])
         range_lenght = int(Maps.SeedToSoil_lines[n][2])
+        seed_range = (seed, seed + range_lenght)
         n += 1
         if (s > seed) & (s < ( seed + range_lenght)) :
             d = s - seed
