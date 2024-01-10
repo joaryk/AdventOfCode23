@@ -38,12 +38,12 @@ for s in seeds:
         seed = int(Maps.SeedToSoil_lines[n][1])
         range_lenght = int(Maps.SeedToSoil_lines[n][2])
         n += 1
-        if (s > seed) & (s < ( s + range_lenght)) : #sprawdzam czy seed mieści się w zakresie i wyliczam soil
+        if (s > seed) & (s < ( seed + range_lenght)) : #sprawdzam czy seed mieści się w zakresie i wyliczam soil
             d = s - seed
             soil_sought = soil + d
             soils.append(soil_sought)
             #print(soil_sought)
-
+ # elif s nie pasuje do warunku, wtedy soil = s
 for o in soils:
 
     n = 0
