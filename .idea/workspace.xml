@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4d6c6f76-4652-435a-8ba5-fed173430b48" name="Changes" comment="Day 4">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day_5/Day5_Part2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Day_5/Day5_Part2.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -381,7 +382,47 @@
       <option name="project" value="LOCAL" />
       <updated>1704842663093</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Day 4">
+      <option name="closed" value="true" />
+      <created>1704896791737</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1704896791737</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Day 4">
+      <option name="closed" value="true" />
+      <created>1704898214685</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1704898214685</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Day 4">
+      <option name="closed" value="true" />
+      <created>1704923992118</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1704923992118</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Day 4">
+      <option name="closed" value="true" />
+      <created>1704925957147</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1704925957147</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Day 4">
+      <option name="closed" value="true" />
+      <created>1704929934753</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1704929934753</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -418,6 +459,13 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Day_5/Day5_Part2.py</url>
+          <line>46</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">

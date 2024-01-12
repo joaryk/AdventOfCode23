@@ -24,6 +24,7 @@ seeds = [
     337630529]
 seeds_ranges = []
 soils = []
+soils_ranges = []
 fertilizers = []
 waters = []
 lights = []
@@ -31,11 +32,9 @@ temperatures = []
 humidities = []
 locations = []
 
-# TU MA BYĆ FUNKCJA OVERLAP set.intersection
-# return range(max(r1.start,r2.start), min(r1.stop,r2.stop)) or None
+def overlap (r1_start, r1_stop, r2_start, r2_stop):
+    return range(max(r1_start, r2_start), min(r1_stop, r2_stop)) or None
 
-
-# listA seeds zamieniona na przedziały:
 count = 0
 for y in range(0, len(seeds), 2):
     start = seeds[y]
@@ -43,7 +42,7 @@ for y in range(0, len(seeds), 2):
     seeds_ranges.append((start, stop))
 
 for s in seeds_ranges:
-    in_range = False
+    #in_range = False
     n = 0
     seed_ranges = []
     for x in Maps.SeedToSoil_:
@@ -52,109 +51,13 @@ for s in seeds_ranges:
         range_lenght = int(Maps.SeedToSoil_lines[n][2])
         seed_range = (seed, seed + range_lenght)
         n += 1
-        if (s > seed) & (s < ( seed + range_lenght)) :
-            d = s - seed
-            soil_sought = soil + d
-            soils.append(soil_sought)
-            in_range = True
-    if in_range == False:
-        soils.append(s)
+        in_range = overlap(*s, *seed_range)
+# tu jest coś nie halo, zapisuje takie same wyniki wiele razy:
+        if in_range == None:
+            soils_ranges.append(s)
+        else:
+            soils_ranges.append(in_range)
 
-for o in soils:
-    in_range = False
-    n = 0
-    for x in Maps.SoilToFertilizer_:
-        fertilizer = int(Maps.SoilToFertilizer_lines[n][0])
-        soil = int(Maps.SoilToFertilizer_lines[n][1])
-        range_lenght = int(Maps.SoilToFertilizer_lines[n][2])
-        n += 1
-        if (o > soil) & (o < (soil + range_lenght)):
-            d = o - soil
-            fertilizer_sought = fertilizer + d
-            fertilizers.append(fertilizer_sought)
-            in_range = True
-    if in_range == False:
-        fertilizers.append(o)
 
-for f in fertilizers:
-    in_range = False
-    n = 0
-    for x in Maps.FertilizerToWater_:
-        water = int(Maps.FertilizerToWater_lines[n][0])
-        fertilizer = int(Maps.FertilizerToWater_lines[n][1])
-        range_lenght = int(Maps.FertilizerToWater_lines[n][2])
-        n += 1
-        if (f > fertilizer) & (f < (fertilizer + range_lenght)):
-            d = f - fertilizer
-            water_sought = water + d
-            waters.append(water_sought)
-            in_range = True
-    if in_range == False:
-        water.append(f)
-
-for w in waters:
-
-    in_range = False
-    n = 0
-    for x in Maps.WaterToLight_:
-        light = int(Maps.WaterToLight_lines[n][0])
-        water = int(Maps.WaterToLight_lines[n][1])
-        range_lenght = int(Maps.WaterToLight_lines[n][2])
-        n += 1
-        if (w > water) & (w < (water + range_lenght)):
-            d = w - water
-            light_sought = light + d
-            lights.append(light_sought)
-            in_range = True
-    if in_range == False:
-        lights.append(w)
-
-for l in lights:
-    in_range = False
-    n = 0
-    for x in Maps.LightToTemperature_:
-        temperature = int(Maps.LightToTemperature_lines[n][0])
-        light = int(Maps.LightToTemperature_lines[n][1])
-        range_lenght = int(Maps.LightToTemperature_lines[n][2])
-        n += 1
-        if (l > light) & (l < (light + range_lenght)):
-            d = l - light
-            temperature_sought = temperature + d
-            temperatures.append(temperature_sought)
-            in_range = True
-    if in_range == False:
-        temperatures.append(l)
-
-for t in temperatures:
-    in_range = False
-    n = 0
-    for x in Maps.TemperatureToHumidity_:
-        humidity = int(Maps.TemperatureToHumidity_lines[n][0])
-        temperature = int(Maps.TemperatureToHumidity_lines[n][1])
-        range_lenght = int(Maps.TemperatureToHumidity_lines[n][2])
-        n += 1
-        if (t > temperature) & (t < (temperature + range_lenght)):
-            d = t - temperature
-            humidity_sought = humidity + d
-            humidities.append(humidity_sought)
-            in_range = True
-    if in_range == False:
-        humidities.append(t)
-
-for h in humidities:
-    in_range = False
-    n = 0
-    for x in Maps.HumidityToLocation_:
-        location = int(Maps.HumidityToLocation_lines[n][0])
-        humidity = int(Maps.HumidityToLocation_lines[n][1])
-        range_lenght = int(Maps.HumidityToLocation_lines[n][2])
-        n += 1
-        if (h > humidity) & (h < (humidity + range_lenght)):
-            d = h - humidity
-            location_sought = location + d
-            locations.append(location_sought)
-            in_range = True
-    if in_range == False:
-        locations.append(h)
 
 print(min(locations))
