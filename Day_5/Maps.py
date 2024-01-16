@@ -255,9 +255,5 @@ for line in HumidityToLocation_:
     HumidityToLocation_lines.append(line.split())
 
 
-# n = 0
-# for x in HumidityToLocation_:
-#     print(HumidityToLocation_lines[n])
-#     n += 1
 
 
