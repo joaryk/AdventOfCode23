@@ -129,8 +129,8 @@ for s in sum:
     result += s
 print(m)
 print(result)
-1088
-550450
+
+#550450
 
 import re
 
