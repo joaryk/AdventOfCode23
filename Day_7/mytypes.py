@@ -1,13 +1,18 @@
 import itertools
-class Hand:
-    import itertools
-    def init(self, hand, bid):
+
+
+class CamelCards:
+    def __init__(self, hand, bid):
         self.hand = hand
         self.bid = bid
-        self.hand_rank = ()
+        self.h_r = self.hand_rank()
 
-    def hand_rank(self, strenght_of_hand, strenght_of_labels):
-        self.hand_rank = (strenght_of_hand, strenght_of_labels)
+    def hand_rank(self):
+
+        strenght_of_hand = self.hand_strenght()
+        strenght_of_labels = self.strenght_of_labels()
+        r = (strenght_of_hand, strenght_of_labels)
+        return r
 
     def hand_labels_map(self):
         hand_labels = {}
@@ -17,20 +22,23 @@ class Hand:
         for label, group in g:
             hand_labels[label] = len(list(group))
         return hand_labels
-# strenght to mapa strenght_of_labels
 
-    def hand_strenght(hand_labels):
+    # strenght to mapa strenght_of_labels
+
+    def hand_strenght(self):
+
+        hand_labels = self.hand_labels_map()
 
         if len(hand_labels) == 1:  # Five of a kind
             return 7
-        elif len(hand_labels) == 2 and ("4" in hand_labels.values()):  # Four of a kind
+        elif len(hand_labels) == 2 and (4 in hand_labels.values()):  # Four of a kind
             return 6
-        elif len(hand_labels) == 2 and ("2" in hand_labels.values()) and ("3" in hand_labels.values()):  # Full house
+        elif len(hand_labels) == 2 and (2 in hand_labels.values()) and (3 in hand_labels.values()):  # Full house
             return 5
-        elif len(hand_labels) == 3 and ("3" in hand_labels.values()) and (
-                "1" in hand_labels.values()):  # Three of a kind
+        elif len(hand_labels) == 3 and (3 in hand_labels.values()) and (
+                1 in hand_labels.values()):  # Three of a kind
             return 4
-        elif len(hand_labels) == 3 and ("2" in hand_labels.values()) and ("1" in hand_labels.values()):  # Two pair
+        elif len(hand_labels) == 3 and (2 in hand_labels.values()) and (1 in hand_labels.values()):  # Two pair
             return 3
         elif len(hand_labels) == 4:  # One pair
             return 2
