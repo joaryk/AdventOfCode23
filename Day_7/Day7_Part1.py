@@ -8,7 +8,7 @@ hands_labels_map = {}
 hands_strenght_map = {}
 hands_bid_map = {}
 
-def sorting_by_hands(hand_labels):
+def hand_strenght(hand_labels_):
 
     if len(hand_labels) == 1: #Five of a kind
         return 7
@@ -24,7 +24,6 @@ def sorting_by_hands(hand_labels):
         return 2
     elif len(hand_labels) ==5: # High card
         return 1
-def sorting_by_labels(strenght):
 
 
 
@@ -32,7 +31,6 @@ for line in hands_txt:
     hand = line.split()[0]
     bid = line.split()[1]
     hands_bid_map[hand] = bid
-
 
 for n in hands_bid_map:
     hand_labels = {}
@@ -42,7 +40,7 @@ for n in hands_bid_map:
     for label, group in g:
         hand_labels[label] = len(list(group))
     hands_labels_map[n] = hand_labels
-    print(n, label_counter)
+    print(n, hand_labels)
 
 
 
