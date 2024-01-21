@@ -1,6 +1,6 @@
 import itertools
 import re
-import my_types
+import my_types_
 
 hands_txt = list(open('camel_cards.txt'))
 
@@ -11,7 +11,7 @@ sorted_hands_list = []
 for line in hands_txt:
     hand = line.split()[0]
     bid = line.split()[1]
-    hands_list.append(my_types.CamelCards(hand, bid))
+    hands_list.append(my_types_.CamelCards(hand, bid))
 
 sorted_hands_list = sorted(hands_list, key=lambda x: x.h_r)
 
