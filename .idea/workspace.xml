@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d6c6f76-4652-435a-8ba5-fed173430b48" name="Changes" comment="class Hand">
-      <change afterPath="$PROJECT_DIR$/Day_7/Day7_Part2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Day_7/my_types_.py" afterDir="false" />
+    <list default="true" id="4d6c6f76-4652-435a-8ba5-fed173430b48" name="Changes" comment="Part2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Day_7/Day7_Part1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Day_7/Day7_Part1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Day_7/mytypes.py" beforeDir="false" afterPath="$PROJECT_DIR$/Day_7/my_types.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day_7/my_types_.py" beforeDir="false" afterPath="$PROJECT_DIR$/Day_7/my_types_.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,14 +127,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1701469712815</updated>
-    </task>
-    <task id="LOCAL-00002" summary="lines of numbers">
-      <option name="closed" value="true" />
-      <created>1701553357695</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1701553357695</updated>
     </task>
     <task id="LOCAL-00003" summary="lines of numbers">
       <option name="closed" value="true" />
@@ -523,7 +512,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705702227060</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="Part2">
+      <option name="closed" value="true" />
+      <created>1705861645175</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1705861645176</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -557,10 +554,23 @@
     <MESSAGE value="Day 3" />
     <MESSAGE value="Day 4" />
     <MESSAGE value="class Hand" />
-    <option name="LAST_COMMIT_MESSAGE" value="class Hand" />
+    <MESSAGE value="Part2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Part2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Day_7/my_types_.py</url>
+          <line>57</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Day_7/Day7_Part2.py</url>
+          <line>13</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">
