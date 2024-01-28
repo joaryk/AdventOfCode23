@@ -1,12 +1,12 @@
 import itertools
 
 
-class CamelCards:
+class CamelCards_:
     def __init__(self, hand, bid):
         self.hand = hand
         self.hand_ = self.checking_J_in_hand()
         self.bid = bid
-        self.h_r = self.hand_rank()
+        self.h_r = (0,'')
 
     def hand_rank(self):
 
@@ -17,16 +17,24 @@ class CamelCards:
 
     def hand_labels_map(self):
         hand_labels = {}
-        labels_in_hand = sorted(self.hand_)
+        labels_in_hand = sorted(self.hand)
         g = itertools.groupby(labels_in_hand, lambda x: x)
         for label, group in g:
             hand_labels[label] = len(list(group))
         return hand_labels
 
 
+    def hand_labels_map_(self):
+        hand_labels = {}
+        labels_in_hand = sorted(self.hand_)
+        g = itertools.groupby(labels_in_hand, lambda x: x)
+        for label, group in g:
+            hand_labels[label] = len(list(group))
+        return hand_labels
+
     def hand_strenght(self):
 
-        hand_labels = self.hand_labels_map()
+        hand_labels = self.hand_labels_map_()
 
         if len(hand_labels) == 1:  # Five of a kind
             return 7
@@ -65,14 +73,19 @@ class CamelCards:
         hand_labels = self.hand_labels_map()
         if "J" in hand_labels:
             #sprawdzama najliczniej występujące znaki, zapisuje je do listy labels_max
-            labels_max.append = [k for k, v in hand_labels.items() if v == max(hand_labels.values()) and k != "J"]
+            #labels_max.append( k for k, v in hand_labels.items() if v == max(hand_labels.values()) and k != "J")
+            for k, v in hand_labels.items():
+                if (v == max(hand_labels.values())) and (k != 'J'):
+                    labels_max.append(k)
             #jeśli jest ich więcej niż 1, sprawdzam, który znak ma większą rangę
             if len(labels_max) > 1:
                 label_max = sorted(labels_max, key=lambda r: strenght_of_labels[r], reverse=True)[0]
+            else:
+                label_max = labels_max[0]
             hand = self.hand
             for h in hand:
                 if h == "J":
-                    new_hand += labels_max
+                    new_hand += str(label_max)
                 else:
                     new_hand += h
             return new_hand
