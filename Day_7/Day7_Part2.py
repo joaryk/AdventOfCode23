@@ -12,8 +12,11 @@ for line in hands_txt:
     hand = line.split()[0]
     bid = line.split()[1]
     hands_list.append(my_types_.CamelCards_(hand, bid))
-# coś się dzieje przy 2giej hand wywołaniu metodzie
+for h in hands_list:
+    h.h_r = h.hand_rank()
 sorted_hands_list = sorted(hands_list, key=lambda x: x.hand_rank())
+#245674174
+#255326326
 
 n = 1
 for s in sorted_hands_list:

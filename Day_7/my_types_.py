@@ -67,6 +67,7 @@ class CamelCards_:
         labels_max = []
         map = {}
         label_max = ''
+        m = 0
         new_hand = ''
         strenght_of_labels = {"2": "A", "3": "B", "4": "C", "5": "D", "6": "E", "7": "F", "8": "G", "9": "H", "T": "I",
                               "J": "J", "Q": "K", "K": "L", "A": "M"}
@@ -77,9 +78,17 @@ class CamelCards_:
             for k, v in hand_labels.items():
                 if (v == max(hand_labels.values())) and (k != 'J'):
                     labels_max.append(k)
+                elif (v == max(hand_labels.values())) and (k == 'J'):
+                    m = v - 1
+            if len(labels_max) == 0:
+                for h, l in hand_labels.items():
+                    if l == m:
+                        labels_max.append(h)
+                    else:
+                        labels_max.append("J")
             #jeśli jest ich więcej niż 1, sprawdzam, który znak ma większą rangę
             if len(labels_max) > 1:
-                label_max = sorted(labels_max, key=lambda r: strenght_of_labels[r], reverse=True)[0]
+                label_max = sorted(labels_max, key=lambda r: strenght_of_labels[r])[0]
             else:
                 label_max = labels_max[0]
             hand = self.hand
