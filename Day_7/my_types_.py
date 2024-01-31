@@ -74,7 +74,7 @@ class CamelCards_:
         hand_labels = self.hand_labels_map()
         if "J" in hand_labels:
             #sprawdzama najliczniej występujące znaki, zapisuje je do listy labels_max
-            #labels_max.append( k for k, v in hand_labels.items() if v == max(hand_labels.values()) and k != "J")
+
             for k, v in hand_labels.items():
                 if (v == max(hand_labels.values())) and (k != 'J'):
                     labels_max.append(k)
@@ -88,7 +88,7 @@ class CamelCards_:
                         labels_max.append("J")
             #jeśli jest ich więcej niż 1, sprawdzam, który znak ma większą rangę
             if len(labels_max) > 1:
-                label_max = sorted(labels_max, key=lambda r: strenght_of_labels[r])[0]
+                label_max = sorted(labels_max, key=lambda r: strenght_of_labels[r], reverse=True)[0]
             else:
                 label_max = labels_max[0]
             hand = self.hand

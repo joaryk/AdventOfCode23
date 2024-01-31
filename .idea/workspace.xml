@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4d6c6f76-4652-435a-8ba5-fed173430b48" name="Changes" comment="Part2">
+      <change afterPath="$PROJECT_DIR$/Day_7/new_way_part_2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Day_7/Day7_Part2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Day_7/Day7_Part2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day_7/Day7_Part2.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Day_7/my_types_.py" beforeDir="false" afterPath="$PROJECT_DIR$/Day_7/my_types_.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -128,14 +129,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1701469712815</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Day 2">
-      <option name="closed" value="true" />
-      <created>1701728458854</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1701728458854</updated>
     </task>
     <task id="LOCAL-00006" summary="Day 2">
       <option name="closed" value="true" />
@@ -521,7 +514,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706445244573</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="Part2">
+      <option name="closed" value="true" />
+      <created>1706734776441</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1706734776442</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
