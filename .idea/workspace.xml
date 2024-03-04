@@ -5,8 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4d6c6f76-4652-435a-8ba5-fed173430b48" name="Changes" comment="Part2">
-      <change afterPath="$PROJECT_DIR$/Day_9/D9_Part1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Day_9/OASIS_report.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -129,22 +127,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1701469712815</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Day 3">
-      <option name="closed" value="true" />
-      <created>1702313899050</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1702313899050</updated>
-    </task>
-    <task id="LOCAL-00014" summary="Day 3">
-      <option name="closed" value="true" />
-      <created>1702335794242</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1702335794242</updated>
     </task>
     <task id="LOCAL-00015" summary="Day 3">
       <option name="closed" value="true" />
@@ -522,7 +504,23 @@
       <option name="project" value="LOCAL" />
       <updated>1708035425842</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="Part2">
+      <option name="closed" value="true" />
+      <created>1708038570477</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1708038570477</updated>
+    </task>
+    <task id="LOCAL-00063" summary="Part2">
+      <option name="closed" value="true" />
+      <created>1708038590111</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1708038590111</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -556,6 +554,7 @@
     <MESSAGE value="Day 3" />
     <MESSAGE value="Day 4" />
     <MESSAGE value="class Hand" />
+    <MESSAGE value="Part1" />
     <MESSAGE value="Part2" />
     <option name="LAST_COMMIT_MESSAGE" value="Part2" />
   </component>
