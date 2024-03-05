@@ -3,7 +3,7 @@ import math
 
 oasis_txt = list(open('OASIS_report.txt'))
 
-last_chars = []
+
 next_values_of_histories = []
 not_all_zeros = True
 
@@ -29,17 +29,24 @@ def differences_(list):
     return list_of_differences
 
 for line in oasis_txt:
+    #zamiast last chars zrobic listę list i dodawac do niej kazda kolejna diff_list, podliczac na koncu linii
+    last_chars = []
     diff_list = differences(line)
     last_char = diff_list[-1]
     last_chars.append(last_char)
+
     while not_all_zeros:
-        #nadpisanie listy nie działa tutaj:
         diff_list = differences_(diff_list)
-        #all_lists.append(diff_list)
         if all([v == 0 for v in diff_list]):
             not_all_zeros = False
         last_char = diff_list[-1]
         last_chars.append(last_char)
+    print(last_chars)
+    c = 1
+    #for l in reversed(last_chars):
+
+
+
 print('we have next values from history')
 
 
