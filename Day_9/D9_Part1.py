@@ -6,7 +6,7 @@ oasis_txt = list(open('OASIS_report.txt'))
 
 next_values_of_histories = []
 not_all_zeros = True
-
+c = 0
 def differences(line_of_oasis):
     list_of_differences = []
     list_of_values = line_of_oasis.split()
@@ -29,24 +29,22 @@ def differences_(list):
     return list_of_differences
 
 for line in oasis_txt:
-    #zamiast last chars zrobic listę list i dodawac do niej kazda kolejna diff_list, podliczac na koncu linii
-    last_chars = []
+    all_diff_lists = []
     diff_list = differences(line)
-    last_char = diff_list[-1]
-    last_chars.append(last_char)
+    all_diff_lists.append(diff_list)
 
     while not_all_zeros:
         diff_list = differences_(diff_list)
         if all([v == 0 for v in diff_list]):
             not_all_zeros = False
-        last_char = diff_list[-1]
-        last_chars.append(last_char)
-    print(last_chars)
-    c = 1
-    #for l in reversed(last_chars):
+        all_diff_lists.append(diff_list)
+    for a in reversed(all_diff_lists):
+        new_value = a[-1]
+
+    c += 1
 
 
 
-print('we have next values from history')
+print(c)
 
 
