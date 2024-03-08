@@ -28,6 +28,7 @@ def differences_(list):
             list_of_differences.append(x)
     return list_of_differences
 
+#od drugiej linii zapisuje już tylko jedną diff_list
 for line in oasis_txt:
     all_diff_lists = []
     diff_list = differences(line)
@@ -38,13 +39,16 @@ for line in oasis_txt:
         if all([v == 0 for v in diff_list]):
             not_all_zeros = False
         all_diff_lists.append(diff_list)
-    for a in reversed(all_diff_lists):
-        new_value = a[-1]
 
-    c += 1
+    new_value = 0
+    for count, a in reversed(list(enumerate(all_diff_lists))):
+        if (count > 0):
+            new_value = new_value + all_diff_lists[count - 1][-1]
+
+    next_values_of_histories.append(new_value)
 
 
 
-print(c)
+print(sum(next_values_of_histories))
 
 
