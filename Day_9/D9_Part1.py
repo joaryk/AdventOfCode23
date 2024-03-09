@@ -5,7 +5,7 @@ oasis_txt = list(open('OASIS_report.txt'))
 
 
 next_values_of_histories = []
-not_all_zeros = True
+
 c = 0
 def differences(line_of_oasis):
     list_of_differences = []
@@ -28,8 +28,9 @@ def differences_(list):
             list_of_differences.append(x)
     return list_of_differences
 
-#od drugiej linii zapisuje już tylko jedną diff_list
+#poprawić różnice gdy są ujemne wartości
 for line in oasis_txt:
+    not_all_zeros = True
     all_diff_lists = []
     diff_list = differences(line)
     all_diff_lists.append(diff_list)

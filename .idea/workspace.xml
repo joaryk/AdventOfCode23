@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d6c6f76-4652-435a-8ba5-fed173430b48" name="Changes" comment="Part2" />
+    <list default="true" id="4d6c6f76-4652-435a-8ba5-fed173430b48" name="Changes" comment="Part2">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day_9/D9_Part1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Day_9/D9_Part1.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -125,38 +128,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1701469712815</updated>
-    </task>
-    <task id="LOCAL-00016" summary="Day 3">
-      <option name="closed" value="true" />
-      <created>1702483794807</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1702483794807</updated>
-    </task>
-    <task id="LOCAL-00017" summary="Day 3">
-      <option name="closed" value="true" />
-      <created>1702545573183</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1702545573183</updated>
-    </task>
-    <task id="LOCAL-00018" summary="Day 3">
-      <option name="closed" value="true" />
-      <created>1702592160874</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1702592160874</updated>
-    </task>
-    <task id="LOCAL-00019" summary="Day 3">
-      <option name="closed" value="true" />
-      <created>1704211412161</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1704211412161</updated>
     </task>
     <task id="LOCAL-00020" summary="Day 3">
       <option name="closed" value="true" />
@@ -518,7 +489,39 @@
       <option name="project" value="LOCAL" />
       <updated>1709589115695</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="Part2">
+      <option name="closed" value="true" />
+      <created>1709649879857</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1709649879857</updated>
+    </task>
+    <task id="LOCAL-00066" summary="Part2">
+      <option name="closed" value="true" />
+      <created>1709679555644</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1709679555644</updated>
+    </task>
+    <task id="LOCAL-00067" summary="Part2">
+      <option name="closed" value="true" />
+      <created>1709822888193</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1709822888193</updated>
+    </task>
+    <task id="LOCAL-00068" summary="Part2">
+      <option name="closed" value="true" />
+      <created>1709933081368</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1709933081368</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -561,8 +564,8 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Day_9/D9_Part1.py</url>
-          <line>12</line>
-          <option name="timeStamp" value="5" />
+          <line>46</line>
+          <option name="timeStamp" value="26" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
