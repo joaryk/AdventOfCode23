@@ -13,7 +13,7 @@ def differences(line_of_oasis):
         if (count_ > 0 and count_< len(list_of_values)):
             v = int(value_)
             y = int(list_of_values[count_ - 1])
-            x = int(abs(y - v))
+            x = int(v - y)
             list_of_differences.append(x)
     return list_of_differences
 
@@ -23,11 +23,10 @@ def differences_(list):
         if (count_ > 0 and count_< len(list)):
             v = int(value_)
             y = int(list[count_ - 1])
-            x = int(abs(y - v))
+            x = int(v - y)
             list_of_differences.append(x)
     return list_of_differences
-
-#poprawić różnice gdy są ujemne wartości
+\
 for line in oasis_txt:
     not_all_zeros = True
     all_diff_lists = []
@@ -44,13 +43,14 @@ for line in oasis_txt:
 
     for a in all_diff_lists:
             print(a)
-    print('/n')
+    #tworzę nowe wartości historii:
     for count, a in reversed(list(enumerate(all_diff_lists))):
-        if (count > 0):
-            new_value = new_value + all_diff_lists[count - 1][-1]
-
+        new_value = new_value + all_diff_lists[count][-1]
+    print('new value = ', new_value)
     next_values_of_histories.append(new_value)
 
 print(sum(next_values_of_histories))
-#947461870
+
+
+#927927514
 

@@ -7,7 +7,6 @@
     <list default="true" id="4d6c6f76-4652-435a-8ba5-fed173430b48" name="Changes" comment="Part2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Day_9/D9_Part1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Day_9/D9_Part1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Day_9/OASIS_report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Day_9/OASIS_report.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,14 +128,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1701469712815</updated>
-    </task>
-    <task id="LOCAL-00021" summary="Day 3">
-      <option name="closed" value="true" />
-      <created>1704239582408</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1704239582408</updated>
     </task>
     <task id="LOCAL-00022" summary="Day 3">
       <option name="closed" value="true" />
@@ -522,7 +513,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710017555528</updated>
     </task>
-    <option name="localTasksCounter" value="70" />
+    <task id="LOCAL-00070" summary="Part2">
+      <option name="closed" value="true" />
+      <created>1710085962918</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1710085962919</updated>
+    </task>
+    <option name="localTasksCounter" value="71" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -562,13 +561,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Day_9/D9_Part1.py</url>
-          <line>44</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-      </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">
