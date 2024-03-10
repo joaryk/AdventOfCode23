@@ -3,10 +3,9 @@ import math
 
 oasis_txt = list(open('OASIS_report.txt'))
 
-
 next_values_of_histories = []
 
-c = 0
+
 def differences(line_of_oasis):
     list_of_differences = []
     list_of_values = line_of_oasis.split()
@@ -14,7 +13,7 @@ def differences(line_of_oasis):
         if (count_ > 0 and count_< len(list_of_values)):
             v = int(value_)
             y = int(list_of_values[count_ - 1])
-            x = int(math.fabs(y - v))
+            x = int(abs(y - v))
             list_of_differences.append(x)
     return list_of_differences
 
@@ -24,7 +23,7 @@ def differences_(list):
         if (count_ > 0 and count_< len(list)):
             v = int(value_)
             y = int(list[count_ - 1])
-            x = int(math.fabs(y - v))
+            x = int(abs(y - v))
             list_of_differences.append(x)
     return list_of_differences
 
@@ -42,14 +41,16 @@ for line in oasis_txt:
         all_diff_lists.append(diff_list)
 
     new_value = 0
+
+    for a in all_diff_lists:
+            print(a)
+    print('/n')
     for count, a in reversed(list(enumerate(all_diff_lists))):
         if (count > 0):
             new_value = new_value + all_diff_lists[count - 1][-1]
 
     next_values_of_histories.append(new_value)
 
-
-
 print(sum(next_values_of_histories))
-
+#947461870
 
