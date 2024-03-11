@@ -33,11 +33,12 @@ for line in oasis_txt:
 
     new_value = 0
 
-    for a in all_diff_lists:
-            print(a)
-    #tworzę nowe wartości historii:
+    # for a in all_diff_lists:
+    #         print(a)
+
     for count, a in reversed(list(enumerate(all_diff_lists))):
         new_value = new_value + all_diff_lists[count][-1]
+
     print('new value = ', new_value)
     next_values_of_histories.append(new_value)
 
