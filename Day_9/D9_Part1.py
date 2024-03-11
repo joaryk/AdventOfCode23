@@ -5,19 +5,11 @@ oasis_txt = list(open('OASIS_report.txt'))
 
 next_values_of_histories = []
 
+def split_line(line):
+    list = line.split()
+    return list
 
-def differences(line_of_oasis):
-    list_of_differences = []
-    list_of_values = line_of_oasis.split()
-    for count_, value_ in enumerate(list_of_values):
-        if (count_ > 0 and count_< len(list_of_values)):
-            v = int(value_)
-            y = int(list_of_values[count_ - 1])
-            x = int(v - y)
-            list_of_differences.append(x)
-    return list_of_differences
-
-def differences_(list):
+def differences(list):
     list_of_differences = []
     for count_, value_ in enumerate(list):
         if (count_ > 0 and count_< len(list)):
@@ -26,15 +18,15 @@ def differences_(list):
             x = int(v - y)
             list_of_differences.append(x)
     return list_of_differences
-\
+
 for line in oasis_txt:
     not_all_zeros = True
     all_diff_lists = []
-    diff_list = differences(line)
+    diff_list = differences(split_line(line))
     all_diff_lists.append(diff_list)
 
     while not_all_zeros:
-        diff_list = differences_(diff_list)
+        diff_list = differences(diff_list)
         if all([v == 0 for v in diff_list]):
             not_all_zeros = False
         all_diff_lists.append(diff_list)
