@@ -33,9 +33,9 @@ for line in oasis_txt:
 
     new_value = 0
 
-    # for a in all_diff_lists:
-    #         print(a)
-
+    for a in all_diff_lists:
+         print(a)
+#sprawdzić od 3 piramidy
     for count, a in reversed(list(enumerate(all_diff_lists))):
         new_value = new_value + all_diff_lists[count][-1]
 
@@ -43,7 +43,6 @@ for line in oasis_txt:
     next_values_of_histories.append(new_value)
 
 print(sum(next_values_of_histories))
-
 
 #927927514
 
